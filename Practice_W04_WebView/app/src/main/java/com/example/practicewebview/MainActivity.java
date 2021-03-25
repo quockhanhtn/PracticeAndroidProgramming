@@ -1,86 +1,84 @@
 package com.example.practicewebview;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
+import android.view.KeyEvent;
 import android.view.View;
 import android.webkit.WebView;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 public class MainActivity extends AppCompatActivity {
 
-    String currentWebViewUrl = "";
-    WebView webView;
+   String currentWebViewUrl = "";
+   WebView webView;
 
-    ImageButton btnRefresh;
-    ImageButton btnForward;
-    ImageButton btnGoBack;
-    EditText editTextUrl;
-    ImageButton btnEnter;
+   ImageButton btnRefresh;
+   ImageButton btnForward;
+   ImageButton btnGoBack;
+   EditText editTextUrl;
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+   @Override
+   protected void onCreate(Bundle savedInstanceState) {
+      super.onCreate(savedInstanceState);
+      setContentView(R.layout.activity_main);
 
-        initComponent();
-        setListener();
+      initComponent();
 
-        goToUrl("https://quockhanh.dev");
-    }
+      goToUrl("https://quockhanh.dev");
+   }
 
-    void initComponent() {
-        webView = (WebView) findViewById(R.id.web_view);
+   void initComponent() {
+      webView = (WebView) findViewById(R.id.web_view);
 
-        btnGoBack = (ImageButton) findViewById(R.id.btn_go_back);
-        btnForward = (ImageButton) findViewById(R.id.btn_forward);
-        btnRefresh = (ImageButton) findViewById(R.id.btn_refresh);
-        btnEnter = (ImageButton) findViewById(R.id.btn_enter);
+      btnGoBack = (ImageButton) findViewById(R.id.btn_go_back);
+      btnForward = (ImageButton) findViewById(R.id.btn_forward);
+      btnRefresh = (ImageButton) findViewById(R.id.btn_refresh);
 
-        editTextUrl = (EditText) findViewById(R.id.edit_text_url);
-    }
+      editTextUrl = (EditText) findViewById(R.id.edit_text_url);
 
-    void setListener() {
-        btnGoBack.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                webView.goBack();
-                updateUrl();
+      editTextUrl.setOnKeyListener(new View.OnKeyListener() {
+         public boolean onKey(View v, int keyCode, KeyEvent event) {
+            if ((event.getAction() == KeyEvent.ACTION_DOWN) && (keyCode == KeyEvent.KEYCODE_ENTER)) {
+               goToUrl(editTextUrl.getText().toString());
+               return true;
             }
-        });
+            return false;
+         }
+      });
+   }
 
-        btnForward.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                webView.goForward();
-                updateUrl();
-            }
-        });
+   public void btnGoBackOnClick(View v) {
+      webView.goBack();
+      updateUrl();
+   }
 
-        btnRefresh.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                webView.loadUrl(currentWebViewUrl);
-            }
-        });
+   public void btnForwardClick(View v) {
+      webView.goForward();
+      updateUrl();
+   }
 
-        btnEnter.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                goToUrl(editTextUrl.getText().toString());
-            }
-        });
-    }
+   public void btnRefreshOnClick(View v) {
+      webView.loadUrl(currentWebViewUrl);
+   }
 
-    void goToUrl(String url) {
-        currentWebViewUrl = url;
-        webView.loadUrl(currentWebViewUrl);
-    }
+   void goToUrl(String url) {
+      currentWebViewUrl = url;
+      webView.loadUrl(currentWebViewUrl);
+      editTextUrl.setText(currentWebViewUrl);
+      updateButtonStatus();
+   }
 
-    void updateUrl() {
-        currentWebViewUrl = webView.getUrl();
-        editTextUrl.setText(currentWebViewUrl);
-    }
+   void updateUrl() {
+      currentWebViewUrl = webView.getUrl();
+      editTextUrl.setText(currentWebViewUrl);
+      updateButtonStatus();
+   }
+
+   void updateButtonStatus() {
+       btnGoBack.setEnabled(webView.canGoBack());
+       btnForward.setEnabled(webView.canGoForward());
+       editTextUrl.clearFocus();
+   }
 }
