@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+  <LinearLayout
+      android:layout_margin="5dp"
+      android:orientation="vertical"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+      <TextView
+          android:layout_weight="0.75"
+          android:layout_height="fill_parent"
+          android:layout_width="0dp"
+          android:text="Scale type" />
+
+      <TextView
+          android:layout_weight="1.25"
+          android:layout_height="fill_parent"
+          android:layout_width="0dp"
+          android:text="Background color" />
+
+      <TextView
+          android:text="Browse"
+          android:layout_width="60dp"
+          android:layout_height="match_parent" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+      <Spinner
+          android:id="@+id/spinner_scale_type"
+          android:layout_weight="0.75"
+          android:layout_height="fill_parent"
+          android:layout_width="0dp" />
+
+      <Spinner
+          android:id="@+id/spinner_background_color"
+          android:layout_weight="1.25"
+          android:layout_height="fill_parent"
+          android:layout_width="0dp" />
+
+      <ImageButton
+          android:id="@+id/btn_change_img"
+          android:layout_width="60dp"
+          android:scaleType="fitXY"
+          android:src="@drawable/image"
+          android:layout_height="match_parent" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/image_view_main"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent" />
+  </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
