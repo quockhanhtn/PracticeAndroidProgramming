@@ -1,0 +1,1 @@
+Android vector drawable flags : https://github.com/Shusshu/android-flags
