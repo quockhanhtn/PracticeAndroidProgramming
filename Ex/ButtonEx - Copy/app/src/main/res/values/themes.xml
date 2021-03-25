@@ -1,0 +1,129 @@
+<resources  xmlns:tools="http://schemas.android.com/tools">
+
+<!-- Base application theme. -->
+<style name="Theme.ButtonEx" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+    <!-- Primary brand color. -->
+    <item name="colorPrimary">#001e51</item>
+    <item name="colorPrimaryVariant">#001e51</item>
+    <item name="colorOnPrimary">@color/white</item>
+    <!-- Secondary brand color. -->
+    <item name="colorSecondary">#007acc</item>
+    <item name="colorSecondaryVariant">#007acc</item>
+    <item name="colorOnSecondary">#fff</item>
+    <!-- Status bar color. -->
+    <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+    <!-- Customize your theme here. -->
+</style>
+
+<!-- Base application theme. -->
+<style name="AppTheme" parent="Theme.MaterialComponents.Light.DarkActionBar">
+    <!-- Customize your theme here. -->
+    <item name="colorPrimary">@color/purple_500</item>
+    <item name="colorPrimaryDark">@color/purple_700</item>
+    <item name="colorAccent">@color/white</item>
+
+    <!--this attribute is to change the theme of the extended FAB-->
+    <item name="extendedFloatingActionButtonStyle">
+        @style/Widget.App.ExtendedFloatingActionButton</item>
+
+    <!--this attribute is to change the theme of the normal FAB-->
+    <item name="floatingActionButtonStyle">@style/Widget.App.FloatingActionButton</item>
+
+</style>
+<!--changing the theme of the base application ends here-->
+
+<!--Now changing theme of extended FAB begins from here-->
+<!--make sure to change the value of the parent as
+    Widget.MaterialComponents.ExtendedFloatingActionButton-->
+<!--as we are only changing the theme of the extended FAB-->
+
+<!--inside Widget.App.ExtendedFloatingActionButton there are two attribute-->
+<!--which are making the change of the theme of the extended FAB-->
+<!--those are materialThemeOverlay and shapeAppearanceOverlay-->
+<style name="Widget.App.ExtendedFloatingActionButton" parent="Widget.MaterialComponents.ExtendedFloatingActionButton">
+
+    <!--the following attribute will changes in the appearance
+        of the extended FAB in terms of colors-->
+    <item name="materialThemeOverlay">@style/myCustomThemeForExtendedFab</item>
+
+    <!--the following attribute will change in the
+        shape appearance of the extended FAB-->
+    <item name="shapeAppearanceOverlay">@style/customExtendedFAB</item>
+
+    <!--to make the code look cleaner and readable, the above
+        two children are implemented separately-->
+</style>
+
+<!--this style is the child of the shapeAppearanceOverlay attribute
+    which in turn is the child of materialThemeOverlay-->
+<style name="customExtendedFAB">
+
+    <!--for the extended FAB the cornerFamily is given the value as the cut-->
+    <item name="cornerFamily">cut</item>
+
+    <!--and the cornerSize makes the cut for all 4 corners of the FAB as 10dp-->
+    <item name="cornerSize">10dp</item>
+
+</style>
+
+<!--Here no need of mentioning the parent-->
+<!--because this is already the child of the
+    shapeAppearanceOverlay which in turn is the child-->
+<!--of the Widget.App.ExtendedFloatingActionButton-->
+<style name="myCustomThemeForExtendedFab" parent="">
+
+    <!--this attribute gives makes the change in the background of the FAB-->
+    <item name="colorSecondary">@color/purple_500</item>
+
+    <!--this attribute gives makes the change in the text and icon color of the FAB-->
+    <item name="colorOnSecondary">@android:color/white</item>
+
+</style>
+<!--Changing the theme of the extended FAB completes here-->
+
+<!--Now changing theme of normal FAB begins from here-->
+<!--make sure to change the value of the parent as
+    Widget.MaterialComponents.FloatingActionButton-->
+<!--as we are only changing the theme of the normal FAB-->
+
+<!--inside Widget.App.FloatingActionButton there are two attribute-->
+<!--which are making the change of the theme of the normal FAB-->
+<!--those are materialThemeOverlay and shapeAppearanceOverlay-->
+<style name="Widget.App.FloatingActionButton" parent="Widget.MaterialComponents.FloatingActionButton">
+
+    <!--the following attribute will changes in the appearance of
+        the normal FAB in terms of colors-->
+    <item name="materialThemeOverlay">@style/myCustomThemeForNormalFab</item>
+
+    <!--the following attribute will change in the shape appearance of the normal FAB-->
+    <item name="shapeAppearanceOverlay">@style/customNormalFAB</item>
+
+    <!--to make the code look cleaner and readable, the above
+        two children are implemented separately-->
+</style>
+
+<style name="customNormalFAB">
+
+    <!--for the normal FAB the cornerFamily is given the value as the rounded-->
+    <!--in this case it has been done to differentiate the
+        themes of the normal FAB and extended FAB-->
+    <item name="cornerFamily">rounded</item>
+
+    <!--and the cornerSize makes rounded corner for all
+        4 corners of the FAB as 20dp radius-->
+    <item name="cornerSize">20dp</item>
+
+</style>
+
+<style name="myCustomThemeForNormalFab" parent="">
+
+    <!--for the extended FAB the cornerFamily is given the value as the cut-->
+    <item name="colorSecondary">@android:color/holo_green_dark</item>
+
+    <!--this attribute gives makes the change in the text and icon color of the FAB-->
+    <item name="colorOnSecondary">@android:color/white</item>
+
+</style>
+<!--Changing the theme of the normal FAB completes here-->
+
+</resources>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">18110304 - Button</string>
+    <string name="registration_title">Đăng ký tài khoản</string>
+    <string name="text_first_name">Tên</string>
+    <string name="text_last_name">Họ</string>
+    <string name="text_dob">Ngày sinh</string>
+    <string name="gender_male">Nam</string>
+    <string name="gender_female">Nữ</string>
+    <string name="gender_other">Khác</string>
+    <string name="agree_term">Đồng ý với điều khoản</string>
+    <string name="btn_register">Đăng ký</string>
+    <string name="text_yes">Đồng ý</string>
+    <string name="text_no">Không</string>
+</resources>

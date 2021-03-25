@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">18110304 - Button</string>
+
+    <string name="registration_title">Account Registration</string>
+
+    <string name="text_first_name">First name</string>
+    <string name="text_last_name">Last name</string>
+    <string name="text_dob">Date of birth</string>
+
+    <string name="gender_male">Male</string>
+    <string name="gender_female">Female</string>
+    <string name="gender_other">Other</string>
+
+    <string name="agree_term">I agree to the Terms</string>
+    <string name="text_yes">Yes</string>
+    <string name="text_no">No</string>
+
+    <string name="btn_register">Register</string>
+</resources>
