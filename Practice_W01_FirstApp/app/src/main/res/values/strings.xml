@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">First Application</string>
+
+    <string name="edit_text_name_hint">Enter your name</string>
+    <string name="btn_submit_content">Submit</string>
+
+    <string name="hello_text">Hello</string>
+    <string name="message_text">Have a nice day</string>
+    <string name="empty_name_text">Your name is empty</string>
+</resources>

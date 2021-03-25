@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Ứng dụng Android đầu tiên</string>
+    <string name="edit_text_name_hint">Nhập tên của bạn</string>
+    <string name="btn_submit_content">Gửi</string>
+    <string name="hello_text">Xin chào</string>
+    <string name="message_text">Chúc bạn một ngày tốt lành</string>
+    <string name="empty_name_text">Tên của bạn không được để trống</string>
+</resources>
