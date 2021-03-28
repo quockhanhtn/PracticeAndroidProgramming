@@ -1,1 +1,3 @@
-![demo](/demo.git) "Demo")
+# Demo
+
+![demo](./demo_medium.gif)
