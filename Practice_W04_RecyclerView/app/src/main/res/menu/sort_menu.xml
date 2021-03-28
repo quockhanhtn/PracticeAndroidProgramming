@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+  <item
+      android:id="@+id/sort_by_name"
+      android:title="Sort by country name" />
+
+  <item
+      android:id="@+id/sort_by_phone_code"
+      android:title="Sort by phone code" />
+
+  <item
+      android:id="@+id/sort_by_iso"
+      android:title="Sort by ISO code" />
+
+</menu>
