@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="app_name">Practice_W05_ConstraintLayout</string>
+  <string name="str_email">Thư điện tử</string>
+  <string name="str_password">Mật khẩu</string>
+  <string name="str_sign_in">Đăng nhập</string>
+  <string name="str_create_acc">Không có tài khoản ?</string>
+</resources>

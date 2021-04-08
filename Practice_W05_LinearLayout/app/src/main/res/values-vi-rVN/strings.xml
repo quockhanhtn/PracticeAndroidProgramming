@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="app_name">Practice_W05_LinearLayout</string>
+  <string name="login_title">Đăng ký</string>
+  <string name="login_desc">Điền thông tin để đăng nhập vào bảng điều khiển</string>
+  <string name="str_username">Tên đăng nhập</string>
+  <string name="str_password">Mật khẩu</string>
+  <string name="str_register">Đăng ký</string>
+  <string name="str_sign_in">Đăng nhập</string>
+</resources>
