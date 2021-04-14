@@ -1,0 +1,406 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity"
+        android:orientation="vertical">
+
+
+    <LinearLayout
+            android:background="@color/light_blue"
+            android:layout_width="match_parent"
+            android:padding="10dp"
+            android:layout_height="120dp"
+            android:orientation="vertical">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+            <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_gravity="left"
+                    android:src="@drawable/map_marker"
+                    app:tint="@color/white"
+                    android:background="@color/light_blue"></ImageButton>
+
+            <Spinner
+                    android:layout_weight="1"
+                    android:id="@+id/spinner_provinces"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"></Spinner>
+
+            <ImageButton
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="right"
+                    android:src="@drawable/cart"
+                    android:tint="@color/white"
+                    android:background="@color/light_blue">
+
+            </ImageButton>
+        </LinearLayout>
+
+        <EditText
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:drawableLeft="@drawable/magnify"
+                android:drawablePadding="10dp"
+                android:textSize="15dp"
+                android:paddingStart="5dp"
+                android:textColor="#3A3A38"
+                android:hint="Tìm sản phẩm, chuyên mục"
+                android:background="@drawable/round_edit_text" />
+    </LinearLayout>
+
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:scrollbars="none">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+            <ImageView
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/fado_vn"></ImageView>
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Hình ảnh và icon lấy từ fado.vn"
+                    android:textAlignment="textEnd"
+                    android:layout_margin="0dp"
+                    android:textSize="13dp"
+                    android:textStyle="italic"
+                    android:layout_marginRight="10dp">
+
+            </TextView>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="fill_parent">
+
+                <!--Row 0-->
+                <LinearLayout
+                        android:id="@+id/row_0"
+                        style="@style/RowLinearLayout"
+                        tools:ignore="MissingConstraints"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintEnd_toEndOf="parent">
+
+                    <LinearLayout style="@style/IconLinearLayout">
+
+                        <com.google.android.material.button.MaterialButton
+                                style="@style/IconButton"
+                                app:shapeAppearanceOverlay="@style/IconButton"
+                                app:icon="@drawable/ic_duty_free"
+                                app:iconTint="#f2319d"
+                                app:iconSize="@dimen/icon_size"
+                                app:iconGravity="start"
+                                tools:ignore="MissingConstraints" />
+
+                        <TextView
+                                android:text="@string/duty_free"
+                                style="@style/IconTextStyle" />
+                    </LinearLayout>
+
+                    <LinearLayout style="@style/IconLinearLayout">
+
+                        <com.google.android.material.button.MaterialButton
+                                style="@style/IconButton"
+                                app:shapeAppearanceOverlay="@style/IconButton"
+                                app:icon="@drawable/ic_watch"
+                                app:iconTint="#378be7"
+                                app:iconSize="@dimen/icon_size"
+                                app:iconGravity="start"
+                                tools:ignore="MissingConstraints" />
+
+                        <TextView
+                                android:text="@string/watch"
+                                style="@style/IconTextStyle" />
+                    </LinearLayout>
+
+                    <LinearLayout style="@style/IconLinearLayout">
+
+                        <com.google.android.material.button.MaterialButton
+                                style="@style/IconButton"
+                                app:shapeAppearanceOverlay="@style/IconButton"
+                                app:icon="@drawable/ic_health"
+                                app:iconTint=" #ff5542"
+                                app:iconSize="@dimen/icon_size"
+                                app:iconGravity="start"
+                                tools:ignore="MissingConstraints" />
+
+                        <TextView
+                                android:text="Sức khỏe"
+                                style="@style/IconTextStyle" />
+                    </LinearLayout>
+
+                    <LinearLayout style="@style/IconLinearLayout">
+
+                        <com.google.android.material.button.MaterialButton
+                                style="@style/IconButton"
+                                app:shapeAppearanceOverlay="@style/IconButton"
+                                app:icon="@drawable/ic_shoes"
+                                app:iconTint="#974ef6"
+                                app:iconSize="@dimen/icon_size"
+                                app:iconGravity="start"
+                                tools:ignore="MissingConstraints" />
+
+                        <TextView
+                                android:text="Giày dép"
+                                style="@style/IconTextStyle" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!--Row 1-->
+                <LinearLayout
+                        android:id="@+id/row_1"
+                        style="@style/RowLinearLayout"
+                        tools:ignore="MissingConstraints"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/row_0">
+
+                    <LinearLayout style="@style/IconLinearLayout">
+
+                        <com.google.android.material.button.MaterialButton
+                                style="@style/IconButton"
+                                app:shapeAppearanceOverlay="@style/IconButton"
+                                app:icon="@drawable/ic_gift_card"
+                                app:iconTint="#75b8d8"
+                                app:iconSize="@dimen/icon_size"
+                                app:iconGravity="start"
+                                tools:ignore="MissingConstraints" />
+
+                        <TextView
+                                android:text="Gift card"
+                                style="@style/IconTextStyle" />
+                    </LinearLayout>
+
+                    <LinearLayout style="@style/IconLinearLayout">
+
+                        <com.google.android.material.button.MaterialButton
+                                style="@style/IconButton"
+                                app:shapeAppearanceOverlay="@style/IconButton"
+                                app:icon="@drawable/ic_vip_club"
+                                app:iconTint="#fd8440"
+                                app:iconSize="@dimen/icon_size"
+                                app:iconGravity="start"
+                                tools:ignore="MissingConstraints" />
+
+                        <TextView
+                                android:text="VIP"
+                                style="@style/IconTextStyle" />
+                    </LinearLayout>
+
+                    <LinearLayout style="@style/IconLinearLayout">
+
+                        <com.google.android.material.button.MaterialButton
+                                style="@style/IconButton"
+                                app:shapeAppearanceOverlay="@style/IconButton"
+                                app:icon="@drawable/ic_golden_brand"
+                                app:iconTint="#3a42d2"
+                                app:iconSize="@dimen/icon_size"
+                                app:iconGravity="start"
+                                tools:ignore="MissingConstraints" />
+
+                        <TextView
+                                android:text="Golden brand"
+                                style="@style/IconTextStyle" />
+                    </LinearLayout>
+
+                    <LinearLayout style="@style/IconLinearLayout">
+
+                        <com.google.android.material.button.MaterialButton
+                                style="@style/IconButton"
+                                app:shapeAppearanceOverlay="@style/IconButton"
+                                app:icon="@drawable/ic_perfume"
+                                app:iconTint="#49e9bb"
+                                app:iconSize="@dimen/icon_size"
+                                app:iconGravity="textEnd"
+                                app:iconPadding="20dp"
+                                tools:ignore="MissingConstraints" />
+
+                        <TextView
+                                android:text="Nước hoa"
+                                style="@style/IconTextStyle" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!--Row 2-->
+                <LinearLayout
+                        android:id="@+id/row_2"
+                        style="@style/RowLinearLayout"
+                        tools:ignore="MissingConstraints"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/row_1">
+
+                    <LinearLayout style="@style/IconLinearLayout">
+
+                        <com.google.android.material.button.MaterialButton
+                                style="@style/IconButton"
+                                app:shapeAppearanceOverlay="@style/IconButton"
+                                app:icon="@drawable/ic_handbag"
+                                app:iconTint="#CD353B"
+                                app:iconSize="@dimen/icon_size"
+                                app:iconGravity="start"
+                                tools:ignore="MissingConstraints" />
+
+                        <TextView
+                                android:text="Túi xách"
+                                style="@style/IconTextStyle" />
+                    </LinearLayout>
+
+                    <LinearLayout style="@style/IconLinearLayout">
+
+                        <com.google.android.material.button.MaterialButton
+                                style="@style/IconButton"
+                                app:shapeAppearanceOverlay="@style/IconButton"
+                                app:icon="@drawable/ic_eyeglasses"
+                                app:iconTint="#00d2ff"
+                                app:iconSize="@dimen/icon_size"
+                                app:iconGravity="end"
+                                tools:ignore="MissingConstraints" />
+
+                        <TextView
+                                android:text="Kính mát"
+                                style="@style/IconTextStyle" />
+                    </LinearLayout>
+
+                    <LinearLayout style="@style/IconLinearLayout">
+
+                        <com.google.android.material.button.MaterialButton
+                                style="@style/IconButton"
+                                app:shapeAppearanceOverlay="@style/IconButton"
+                                app:icon="@drawable/ic_health"
+                                app:iconTint=" #ff5542"
+                                app:iconSize="@dimen/icon_size"
+                                app:iconGravity="start"
+                                tools:ignore="MissingConstraints" />
+
+                        <TextView
+                                android:text="Sức khỏe"
+                                style="@style/IconTextStyle" />
+                    </LinearLayout>
+
+                    <LinearLayout style="@style/IconLinearLayout">
+
+                        <com.google.android.material.button.MaterialButton
+                                style="@style/IconButton"
+                                app:shapeAppearanceOverlay="@style/IconButton"
+                                app:icon="@drawable/ic_shoes"
+                                app:iconTint="#974ef6"
+                                app:iconSize="@dimen/icon_size"
+                                app:iconGravity="start"
+                                tools:ignore="MissingConstraints" />
+
+                        <TextView
+                                android:text="Giày dép"
+                                style="@style/IconTextStyle" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!--Row 3-->
+                <LinearLayout
+                        android:id="@+id/row_3"
+                        style="@style/RowLinearLayout"
+                        tools:ignore="MissingConstraints"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/row_2">
+
+                    <LinearLayout style="@style/IconLinearLayout">
+
+                        <com.google.android.material.button.MaterialButton
+                                style="@style/IconButton"
+                                app:shapeAppearanceOverlay="@style/IconButton"
+                                app:icon="@drawable/ic_duty_free"
+                                app:iconTint="#f2319d"
+                                app:iconSize="@dimen/icon_size"
+                                app:iconGravity="start"
+                                tools:ignore="MissingConstraints" />
+
+                        <TextView
+                                android:text="Duty Free"
+                                style="@style/IconTextStyle" />
+                    </LinearLayout>
+
+                    <LinearLayout style="@style/IconLinearLayout">
+
+                        <com.google.android.material.button.MaterialButton
+                                style="@style/IconButton"
+                                app:shapeAppearanceOverlay="@style/IconButton"
+                                app:icon="@drawable/ic_watch"
+                                app:iconTint="#378be7"
+                                app:iconSize="@dimen/icon_size"
+                                app:iconGravity="start"
+                                tools:ignore="MissingConstraints" />
+
+                        <TextView
+                                android:text="Đồng hồ"
+                                style="@style/IconTextStyle" />
+                    </LinearLayout>
+
+                    <LinearLayout style="@style/IconLinearLayout">
+
+                        <com.google.android.material.button.MaterialButton
+                                style="@style/IconButton"
+                                app:shapeAppearanceOverlay="@style/IconButton"
+                                app:icon="@drawable/ic_health"
+                                app:iconTint=" #ff5542"
+                                app:iconSize="@dimen/icon_size"
+                                app:iconGravity="start"
+                                tools:ignore="MissingConstraints" />
+
+                        <TextView
+                                android:text="Sức khỏe"
+                                style="@style/IconTextStyle" />
+                    </LinearLayout>
+
+                    <LinearLayout style="@style/IconLinearLayout">
+
+                        <com.google.android.material.button.MaterialButton
+                                style="@style/IconButton"
+                                app:shapeAppearanceOverlay="@style/IconButton"
+                                app:icon="@drawable/ic_shoes"
+                                app:iconTint="#974ef6"
+                                app:iconSize="@dimen/icon_size"
+                                app:iconGravity="start"
+                                tools:ignore="MissingConstraints" />
+
+                        <TextView
+                                android:text="Giày dép"
+                                style="@style/IconTextStyle" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

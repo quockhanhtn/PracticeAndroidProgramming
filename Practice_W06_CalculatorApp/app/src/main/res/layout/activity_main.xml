@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="10"
+        android:background="@color/gray"
+        tools:context=".MainActivity">
+
+    <TextView
+            android:text="18110.304"
+            android:textAlignment="viewEnd"
+            android:textSize="60dp"
+            android:textColor="@color/dark_blue"
+            android:id="@+id/txt_view"
+            android:layout_width="@dimen/row_width"
+            android:layout_height="@dimen/row_height"
+            android:gravity="center"
+            tools:ignore="MissingConstraints,RtlCompat"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintStart_toEndOf="@id/row_4"
+            app:layout_constraintBottom_toBottomOf="@id/row_4"
+            android:layout_marginBottom="@dimen/row_height"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:lineSpacingExtra="6sp" />
+
+    <LinearLayout
+            android:id="@+id/row_4"
+            android:layout_width="@dimen/row_width"
+            android:layout_height="@dimen/row_height"
+            android:gravity="center"
+            tools:ignore="MissingConstraints"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintStart_toEndOf="@id/row_3"
+            app:layout_constraintBottom_toBottomOf="@id/row_3"
+            android:layout_marginBottom="@dimen/row_height"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintEnd_toEndOf="parent">
+
+        <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_ac"
+                android:layout_height="@dimen/btn_size"
+                android:layout_width="@dimen/btn_size"
+                android:layout_gravity="center"
+                android:gravity="center"
+                style="@style/CircleButton"
+                app:shapeAppearanceOverlay="@style/CircleButton"
+                app:backgroundTint="@color/light_blue"
+                app:icon="@drawable/btn_ac"
+                app:iconSize="@dimen/icon_size"
+                app:iconGravity="start"
+                android:padding="@dimen/icon_pad"
+                tools:ignore="MissingConstraints" />
+
+        <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_plus_minus"
+                android:layout_height="@dimen/btn_size"
+                android:layout_width="@dimen/btn_size"
+                android:layout_gravity="center"
+                android:gravity="center"
+                style="@style/CircleButton"
+                app:shapeAppearanceOverlay="@style/CircleButton"
+                app:backgroundTint="@color/light_blue"
+                app:icon="@drawable/plus_minus_variant"
+                app:iconSize="@dimen/icon_size"
+                app:iconGravity="start"
+                android:padding="@dimen/icon_pad"
+                tools:ignore="MissingConstraints" />
+
+        <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_percent"
+                android:layout_height="@dimen/btn_size"
+                android:layout_width="@dimen/btn_size"
+                android:layout_gravity="center"
+                android:gravity="center"
+                style="@style/CircleButton"
+                app:shapeAppearanceOverlay="@style/CircleButton"
+                app:backgroundTint="@color/light_blue"
+                app:icon="@drawable/percent"
+                app:iconSize="@dimen/icon_size"
+                app:iconGravity="start"
+                android:padding="@dimen/icon_pad"
+                tools:ignore="MissingConstraints" />
+
+        <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_div"
+                android:layout_height="@dimen/btn_size"
+                android:layout_width="@dimen/btn_size"
+                android:layout_gravity="center"
+                android:gravity="center"
+                style="@style/CircleButton"
+                app:shapeAppearanceOverlay="@style/CircleButton"
+                app:backgroundTint="@color/purple_700"
+                app:icon="@drawable/division"
+                app:iconSize="@dimen/icon_size"
+                app:iconGravity="start"
+                android:padding="@dimen/icon_pad"
+                tools:ignore="MissingConstraints" />
+    </LinearLayout>
+
+    <LinearLayout
+            android:id="@+id/row_3"
+            android:layout_width="@dimen/row_width"
+            android:layout_height="@dimen/row_height"
+            android:gravity="center"
+            tools:ignore="MissingConstraints"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintStart_toEndOf="@id/row_2"
+            app:layout_constraintBottom_toBottomOf="@id/row_2"
+            android:layout_marginBottom="@dimen/row_height"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintEnd_toEndOf="parent">
+
+        <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_7"
+                android:layout_height="@dimen/btn_size"
+                android:layout_width="@dimen/btn_size"
+                android:layout_gravity="center"
+                android:gravity="center"
+                style="@style/CircleButton"
+                app:shapeAppearanceOverlay="@style/CircleButton"
+                app:icon="@drawable/numeric_7"
+                app:iconSize="@dimen/icon_size"
+                app:iconGravity="start"
+                android:padding="@dimen/icon_pad"
+                tools:ignore="MissingConstraints" />
+
+        <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_8"
+                android:layout_height="@dimen/btn_size"
+                android:layout_width="@dimen/btn_size"
+                android:layout_gravity="center"
+                android:gravity="center"
+                style="@style/CircleButton"
+                app:shapeAppearanceOverlay="@style/CircleButton"
+                app:icon="@drawable/numeric_8"
+                app:iconSize="@dimen/icon_size"
+                app:iconGravity="start"
+                android:padding="@dimen/icon_pad"
+                tools:ignore="MissingConstraints" />
+
+        <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_9"
+                android:layout_height="@dimen/btn_size"
+                android:layout_width="@dimen/btn_size"
+                android:layout_gravity="center"
+                android:gravity="center"
+                style="@style/CircleButton"
+                app:shapeAppearanceOverlay="@style/CircleButton"
+                app:icon="@drawable/numeric_9"
+                app:iconSize="@dimen/icon_size"
+                app:iconGravity="start"
+                android:padding="@dimen/icon_pad"
+                tools:ignore="MissingConstraints" />
+
+        <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_mul"
+                android:layout_height="@dimen/btn_size"
+                android:layout_width="@dimen/btn_size"
+                android:layout_gravity="center"
+                android:gravity="center"
+                style="@style/CircleButton"
+                app:shapeAppearanceOverlay="@style/CircleButton"
+                app:backgroundTint="@color/purple_700"
+                app:icon="@drawable/close_thick"
+                app:iconSize="@dimen/icon_size"
+                app:iconGravity="start"
+                android:padding="@dimen/icon_pad"
+                tools:ignore="MissingConstraints" />
+    </LinearLayout>
+
+    <LinearLayout
+            android:id="@+id/row_2"
+            android:layout_width="@dimen/row_width"
+            android:layout_height="@dimen/row_height"
+            android:gravity="center"
+            tools:ignore="MissingConstraints"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintStart_toEndOf="@id/row_1"
+            app:layout_constraintBottom_toBottomOf="@id/row_1"
+            android:layout_marginBottom="@dimen/row_height"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintEnd_toEndOf="parent">
+
+        <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_4"
+                android:layout_height="@dimen/btn_size"
+                android:layout_width="@dimen/btn_size"
+                android:layout_gravity="center"
+                android:gravity="center"
+                style="@style/CircleButton"
+                app:shapeAppearanceOverlay="@style/CircleButton"
+                app:icon="@drawable/numeric_4"
+                app:iconSize="@dimen/icon_size"
+                app:iconGravity="start"
+                android:padding="@dimen/icon_pad"
+                tools:ignore="MissingConstraints" />
+
+        <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_5"
+                android:layout_height="@dimen/btn_size"
+                android:layout_width="@dimen/btn_size"
+                android:layout_gravity="center"
+                android:gravity="center"
+                style="@style/CircleButton"
+                app:shapeAppearanceOverlay="@style/CircleButton"
+                app:icon="@drawable/numeric_5"
+                app:iconSize="@dimen/icon_size"
+                app:iconGravity="start"
+                android:padding="@dimen/icon_pad"
+                tools:ignore="MissingConstraints" />
+
+        <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_6"
+                android:layout_height="@dimen/btn_size"
+                android:layout_width="@dimen/btn_size"
+                android:layout_gravity="center"
+                android:gravity="center"
+                style="@style/CircleButton"
+                app:shapeAppearanceOverlay="@style/CircleButton"
+                app:icon="@drawable/numeric_6"
+                app:iconSize="@dimen/icon_size"
+                app:iconGravity="start"
+                android:padding="@dimen/icon_pad"
+                tools:ignore="MissingConstraints" />
+
+        <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_minus"
+                android:layout_height="@dimen/btn_size"
+                android:layout_width="@dimen/btn_size"
+                android:layout_gravity="center"
+                android:gravity="center"
+                style="@style/CircleButton"
+                app:shapeAppearanceOverlay="@style/CircleButton"
+                app:backgroundTint="@color/purple_700"
+                app:icon="@drawable/minus_thick"
+                app:iconSize="@dimen/icon_size"
+                app:iconGravity="start"
+                android:padding="@dimen/icon_pad"
+                tools:ignore="MissingConstraints" />
+    </LinearLayout>
+
+    <LinearLayout
+            android:id="@+id/row_1"
+            android:layout_width="@dimen/row_width"
+            android:layout_height="@dimen/row_height"
+            android:gravity="center"
+            tools:ignore="MissingConstraints"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintStart_toEndOf="@id/row_0"
+            app:layout_constraintBottom_toBottomOf="@id/row_0"
+            android:layout_marginBottom="@dimen/row_height"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintEnd_toEndOf="parent">
+
+        <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_1"
+                android:layout_height="@dimen/btn_size"
+                android:layout_width="@dimen/btn_size"
+                android:layout_gravity="center"
+                android:gravity="center"
+                style="@style/CircleButton"
+                app:shapeAppearanceOverlay="@style/CircleButton"
+                app:icon="@drawable/numeric_1"
+                app:iconSize="@dimen/icon_size"
+                app:iconGravity="start"
+                android:padding="@dimen/icon_pad"
+                tools:ignore="MissingConstraints" />
+
+        <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_2"
+                android:layout_height="@dimen/btn_size"
+                android:layout_width="@dimen/btn_size"
+                android:layout_gravity="center"
+                android:gravity="center"
+                style="@style/CircleButton"
+                app:shapeAppearanceOverlay="@style/CircleButton"
+                app:icon="@drawable/numeric_2"
+                app:iconSize="@dimen/icon_size"
+                app:iconGravity="start"
+                android:padding="@dimen/icon_pad"
+                tools:ignore="MissingConstraints" />
+
+        <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_3"
+                android:layout_height="@dimen/btn_size"
+                android:layout_width="@dimen/btn_size"
+                android:layout_gravity="center"
+                android:gravity="center"
+                style="@style/CircleButton"
+                app:shapeAppearanceOverlay="@style/CircleButton"
+                app:icon="@drawable/numeric_3"
+                app:iconSize="@dimen/icon_size"
+                app:iconGravity="start"
+                android:padding="@dimen/icon_pad"
+                tools:ignore="MissingConstraints" />
+
+        <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_add"
+                android:layout_height="@dimen/btn_size"
+                android:layout_width="@dimen/btn_size"
+                android:layout_gravity="center"
+                android:gravity="center"
+                style="@style/CircleButton"
+                app:shapeAppearanceOverlay="@style/CircleButton"
+                app:backgroundTint="@color/purple_700"
+                app:icon="@drawable/plus_thick"
+                app:iconSize="@dimen/icon_size"
+                app:iconGravity="start"
+                android:padding="@dimen/icon_pad"
+                tools:ignore="MissingConstraints" />
+    </LinearLayout>
+
+    <LinearLayout
+            android:id="@+id/row_0"
+            android:layout_width="@dimen/row_width"
+            android:layout_height="@dimen/row_height"
+            android:gravity="center"
+            tools:ignore="MissingConstraints"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintStart_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintEnd_toEndOf="parent">
+
+        <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_0"
+                android:layout_height="@dimen/btn_size"
+                android:layout_width="@dimen/btn_size_2"
+                android:layout_gravity="center"
+                android:gravity="center"
+                style="@style/CircleButton"
+                app:shapeAppearanceOverlay="@style/CircleButton"
+                app:icon="@drawable/numeric_0"
+                app:iconSize="@dimen/icon_size"
+                app:iconGravity="start"
+                android:padding="@dimen/icon_pad"
+                tools:ignore="MissingConstraints" />
+
+        <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_dot"
+                android:layout_height="@dimen/btn_size"
+                android:layout_width="@dimen/btn_size"
+                android:layout_gravity="center"
+                android:gravity="center"
+                style="@style/CircleButton"
+                app:shapeAppearanceOverlay="@style/CircleButton"
+                app:icon="@drawable/circle_small"
+                app:iconSize="@dimen/icon_size"
+                app:iconGravity="start"
+                android:padding="@dimen/icon_pad"
+                tools:ignore="MissingConstraints" />
+
+        <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_equal"
+                android:layout_height="@dimen/btn_size"
+                android:layout_width="@dimen/btn_size"
+                android:layout_gravity="center"
+                android:gravity="center"
+                style="@style/CircleButton"
+                app:shapeAppearanceOverlay="@style/CircleButton"
+                app:backgroundTint="@color/purple_700"
+                app:icon="@drawable/equal"
+                app:iconSize="@dimen/icon_size"
+                app:iconGravity="start"
+                android:padding="@dimen/icon_pad"
+                tools:ignore="MissingConstraints" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
