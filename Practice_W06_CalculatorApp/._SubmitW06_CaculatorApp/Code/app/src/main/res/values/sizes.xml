@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="row_height">110dp</dimen>
+    <dimen name="row_width">372dp</dimen>
+
+    <dimen name="btn_size">85dp</dimen>
+    <dimen name="btn_size_2">178dp</dimen>
+
+    <dimen name="icon_size">75dp</dimen>
+    <dimen name="icon_pad">4dp</dimen>
+</resources>
