@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:tools="http://schemas.android.com/tools"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:orientation="vertical"
+      android:paddingHorizontal="100dp"
+      android:paddingVertical="20dp"
+      android:id="@+id/main_activity"
+      tools:context=".MainActivity">
+
+  <Button android:id="@+id/btn_go_to_sub_activity"
+        android:text="Go to sub activity"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        tools:ignore="MissingConstraints" />
+
+  <Button android:id="@+id/btn_go_to_utex"
+        android:text="Go to UTEX"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        tools:ignore="MissingConstraints" />
+
+  <Button android:id="@+id/btn_start_service"
+        android:text="Start service"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        tools:ignore="MissingConstraints" />
+
+  <Button android:id="@+id/btn_select_image"
+        android:text="Select image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+  <ImageView android:id="@+id/img_view_display"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto"
+      xmlns:tools="http://schemas.android.com/tools"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:paddingVertical="20dp"
+      android:paddingHorizontal="20dp"
+      android:orientation="vertical"
+      tools:context=".InputInfoActivity">
+
+  <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Edit Information"
+        android:layout_marginBottom="60dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
+
+  <!--region First name -->
+  <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="First name:"
+        android:textStyle="bold"
+        android:textSize="18sp" />
+
+  <EditText
+        android:id="@+id/edit_text_first_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="22sp"
+        android:singleLine="true"
+        android:layout_marginBottom="35dp" />
+  <!--endregion-->
+
+  <!--region Last name -->
+  <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Last name:"
+        android:textStyle="bold"
+        android:textSize="18sp" />
+
+  <EditText
+        android:id="@+id/edit_text_last_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="22sp"
+        android:singleLine="true"
+        android:layout_marginBottom="35dp" />
+  <!--endregion-->
+
+  <!--region Gender -->
+  <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Gender:"
+        android:textStyle="bold"
+        android:textSize="18sp" />
+
+  <RadioGroup
+        android:id="@+id/radio_grp_gender"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingStart="20dp"
+        android:weightSum="3">
+
+    <RadioButton
+          android:id="@+id/radio_gender_male"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          android:text="Male" />
+
+    <RadioButton
+          android:id="@+id/radio_gender_female"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          android:text="Female" />
+
+    <RadioButton
+          android:id="@+id/radio_gender_other"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          android:text="Other" />
+  </RadioGroup>
+  <!--endregion-->
+
+  <!--region Button -->
+  <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.AppCompatButton
+          android:id="@+id/btn_save"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginHorizontal="70dp"
+          style="@style/Widget.AppCompat.Button.Colored"
+          android:text="Save"
+          tools:ignore="MissingConstraints"
+          android:layout_marginBottom="50dp"
+          app:layout_constraintBottom_toBottomOf="@id/btn_cancel" />
+
+    <androidx.appcompat.widget.AppCompatButton
+          android:id="@+id/btn_cancel"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginHorizontal="70dp"
+          android:text="Cancel"
+          tools:ignore="MissingConstraints"
+          android:layout_marginBottom="20dp"
+          app:layout_constraintBottom_toBottomOf="parent" />
+  </androidx.constraintlayout.widget.ConstraintLayout>
+  <!--endregion-->
+</LinearLayout>
